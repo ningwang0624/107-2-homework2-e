@@ -119,6 +119,21 @@ $$Y=Y_{-p}+\beta^* P$$
 
 說明此時$E(Y|P)$中P的係數「不」為$\beta^*$，但$E(Y|P,rincome)$中P的係數為$\beta^*$。
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&=\tilde{\epsilon}+2+3rincome+\beta^*P\\
+&因為P和rincome有關，所以將0.5+P代入\\
+&E(Y|P)=2+3E(rincome|P)+\beta^*P\\
+&=2+3(0.5+P)+\beta^*P\\
+&=3.5+(3+\beta^*)P\\
+&\\
+&E(Y|P,rincome)=2+3rincome+\beta^*P\\
+&在固定P和rincome的條件下，立足點相同\\
+&所以P的係數為\beta
+\end{align}
+</td></tr></table>
+
 ## 2.3 立足點情境A.3
 
 考慮以下兩個情境條件：

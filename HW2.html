@@ -197,7 +197,7 @@ $(document).ready(function () {
 <hr />
 <p>姓名：王逸寧, 林奕誠, 陳培鴻, 吳泓叡<br />
 學號：710761001, 710661110, 710561118, 710761119<br />
-組號：team1<br />
+組號：teamE<br />
 網頁：</p>
 <hr />
 <p>作業除了讓同學檢視課堂所學程式外，有些題目只會給你未教過的函數建議（純為建議，你也可以不使用），你必需使用Help或網路查尋去了解函數的正確使用；搜詢正確程式函數使用的能力，也是程式設計的基本功。</p>
@@ -269,8 +269,8 @@ fertil2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-
 <tr>
 <td bgcolor="#F5DEB3">
 <span class="math display">\[\begin{align}
-&amp;Y=\tilde{\epsilon}+E(T_{-P}|rincome)+\beta^*P\\
-&amp;此時將E(Y_{-p}|rincome)=2+3 rincome代入\\
+&amp;Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&amp;將E(Y_{-p}|rincome)=2+3 rincome代入\\
 &amp;E(Y|P)=E(\tilde{\epsilon})+2+3rincome+\beta^*E(P)\\
 &amp;=\beta^*P+2+3rincome\\
 &amp;因為P和\tilde{\epsilon}及rincome皆無關，立足點相同\\
@@ -288,6 +288,24 @@ fertil2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-
 <p>【A.2.2】 P與<span class="math inline">\(rincome\)</span>有關——令<span class="math inline">\(E(rincome|P)=0.5+P\)</span>。</p>
 <p>即P與<span class="math inline">\(Y_{-p}\)</span>有關連，但此關連性來自於【A.2.2】中P與rincome的關連——即<span class="math inline">\(E(rincome|P)\)</span>部份。</p>
 <p>說明此時<span class="math inline">\(E(Y|P)\)</span>中P的係數「不」為<span class="math inline">\(\beta^*\)</span>，但<span class="math inline">\(E(Y|P,rincome)\)</span>中P的係數為<span class="math inline">\(\beta^*\)</span>。</p>
+<table>
+<tr>
+<td bgcolor="#F5DEB3">
+<span class="math display">\[\begin{align}
+&amp;Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&amp;=\tilde{\epsilon}+2+3rincome+\beta^*P\\
+&amp;因為P和rincome有關，所以將0.5+P代入\\
+&amp;E(Y|P)=2+3E(rincome|P)+\beta^*P\\
+&amp;=2+3(0.5+P)+\beta^*P\\
+&amp;=3.5+(3+\beta^*)P\\
+&amp;\\
+&amp;E(Y|P,rincome)=2+3rincome+\beta^*P\\
+&amp;在固定P和rincome的條件下，立足點相同\\
+&amp;-&gt;所以P的係數為\beta
+\end{align}\]</span>
+</td>
+</tr>
+</table>
 </div>
 <div id="a.3" class="section level2">
 <h2>2.3 立足點情境A.3</h2>
