@@ -8,9 +8,9 @@ output:
       collapsed: true
       smooth_scroll: false
 params:
-  name: ["阿花","阿明"]
-  id: [710761001,710661002]
-  group: "team1"
+  name: ["王逸寧","林奕誠","陳培鴻","吳泓叡"]
+  id: [710761001,710661110,710561118,710761119]
+  group: "teamE"
   url: ""
 ---
 請依狀況更改上面的name,id及group（分別代表組員姓名，學號及組號），但請勿更改下面三行的設定。  
@@ -94,6 +94,18 @@ $$Y=Y_{-p}+\beta^* P$$
   【A.1】P與立足點中的兩部份，$\tilde{\epsilon}$及$rincome$，皆無關。
 
 說明此時$E(Y|P)$中P的係數即為$\beta^*$.
+
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&將E(Y_{-p}|rincome)=2+3 rincome代入\\
+&E(Y|P)=E(\tilde{\epsilon})+2+3rincome+\beta^*E(P)\\
+&=\beta^*P+2+3rincome\\
+&因為P和\tilde{\epsilon}及rincome皆無關，立足點相同\\
+&所以2+3rincome為確定的常數\\
+&因此此時E(Y|P)的P係數為\beta^*\\
+\end{align}
+</td></tr></table>
 
 ## 2.2 立足點情境A.2
 
