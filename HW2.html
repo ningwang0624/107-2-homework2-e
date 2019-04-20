@@ -301,7 +301,7 @@ fertil2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-
 &amp;\\
 &amp;E(Y|P,rincome)=2+3rincome+\beta^*P\\
 &amp;在固定P和rincome的條件下，立足點相同\\
-&amp;-&gt;所以P的係數為\beta
+&amp;所以P的係數為\beta
 \end{align}\]</span>
 </td>
 </tr>
@@ -314,6 +314,26 @@ fertil2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-
 <p>【A.3.2】 P與<span class="math inline">\(rincome\)</span>有關——令<span class="math inline">\(E(rincome|P)=0.5+P\)</span>。</p>
 <p>即P與<span class="math inline">\(Y_{-p}\)</span>有關連：此關連性可來自於【A.2.2】中P與rincome的關連，也可來自於它與「非價格、非所得」引起的銷量之關連（即與<span class="math inline">\(\tilde{\epsilon}\)</span>相關部份）</p>
 <p>若<span class="math inline">\(E(\tilde{\epsilon}|P)=0.5+2P\)</span>，說明不論使用<span class="math inline">\(E(Y|P)\)</span>或<span class="math inline">\(E(Y|P,rincome)\)</span>，其P之係數都不會是<span class="math inline">\(\beta^*\)</span></p>
+<table>
+<tr>
+<td bgcolor="#F5DEB3">
+<span class="math display">\[\begin{align}
+&amp;Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&amp;=\tilde{\epsilon}+2+3rincome+\beta^*P\\
+&amp;E(Y|P)=E(\tilde{\epsilon}|P)+2+3E(rincome|P)+\beta^*P\\
+&amp;因為P和\tilde{\epsilon}有關，所以將0.5+2P代入\\
+&amp;而P和rincome有關，所以將0.5+P代入\\
+&amp;=0.5+2P+2+3(0.5+P)+\beta^*P\\
+&amp;=4+(5+\beta^*)P\\
+&amp;\\
+&amp;E(Y|P,rincome)=2+3rincome+\beta^*P+E(\tilde{\epsilon}|P,rincome)\\
+&amp;此時多固定rincome，所以只需代入0.5+2P\\
+&amp;=0.5+2P+2+3rincome+\beta^*P\\
+&amp;=2.5+3rincome+(2+\beta^*)P
+\end{align}\]</span>
+</td>
+</tr>
+</table>
 </div>
 <div id="a.3b.1tsls" class="section level2">
 <h2>2.4 立足點情境A.3+效應情境B.1：TSLS</h2>
