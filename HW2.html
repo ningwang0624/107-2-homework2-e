@@ -366,6 +366,20 @@ fertil2 &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-
 <p>【A.3.2】 P與<span class="math inline">\(rincome\)</span>有關——令<span class="math inline">\(E(rincome|P)=0.5+P\)</span>。</p>
 <p>【B.1】<span class="math inline">\(P_z\)</span>與<span class="math inline">\(\tilde{\epsilon}\)</span>無關</p>
 <p>說明使用<span class="math inline">\(E(Y|P,rincome,z)\)</span>其中<span class="math inline">\(P\)</span>的係 數不會是<span class="math inline">\(\beta^*\)</span>.</p>
+<table>
+<tr>
+<td bgcolor="#F5DEB3">
+<span class="math display">\[\begin{align}
+&amp;Y=Y_{-P,-z,-rincome}+\beta^*P+\beta_1^*rincome+\beta_2^*z\\
+&amp;令P=\tilde{v}+P_z=\tilde{v}+\alpha_0+\alpha_1z\\
+&amp;將z=\frac{P-\tilde{v}-\alpha_0}{\alpha_1}代回\\
+&amp;Y=Y_{-P,-z,-rincome}+\beta^*P+\beta_1^*rincome+\beta_2^*\frac{P-\tilde{v}-\alpha_0}{\alpha_1}\\
+&amp;=Y_{-P,-z,-rincome}+\beta_1^*rincome+(\beta^*+\frac{\beta_2^*}{\alpha_1})P+\beta_2^*\frac{-\tilde{v}-\alpha_0}{\alpha_1}\\
+&amp;從上式可知P的係數不會是\beta^*\\
+\end{align}\]</span>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="section level1">
