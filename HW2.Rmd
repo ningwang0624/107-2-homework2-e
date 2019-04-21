@@ -101,14 +101,14 @@ Continue from 1.4, conduct Hausman test to see if OLS is valid for the study und
 library(sandwich)
 summary(a142, vcov = sandwich, diagnostics = TRUE, df=Inf)->a15
 a15
-#由表格顯示的結果，可知在5%檢定水準下，Hausman不顯著，無法拒絕OLS和TSLS差不多相同
+#由表格顯示的結果，可知在5%檢定水準下，Hausman不顯著，無法拒絕OLS和TSLS的係數差不多相同
 ```
 
 ## 1.6
 Can we test whether frsthalf is indeed exogenous for being an IV? why or why not?
 
 \begin{align}
-&因為使用ivreg的前提為解釋變數與工具變數數量相同，所以在這個情況下我們沒辦法檢定外生性，若要檢定外生性，必須工具變數的數量大於解釋變數的數量。
+&因為使用ivreg的前提為效應解釋變數與工具變數數量相同，所以在這個情況下我們沒辦法檢定外生性，若要檢定外生性，必須工具變數的數量大於解釋變數的數量。
 \end{align}
 
 ## 1.7
@@ -116,7 +116,11 @@ If we add one more IV catholic, can we test IV exogeneity? If yes, what is the t
 
 
 ```{r ans17}
-
+a17<- ivreg(children~educ+age+agesq+electric+tv+bicycle|age+agesq+electric+tv+bicycle+frsthalf+catholic, data=fertil2)
+summary(a17)
+summary(a17, vcov = sandwich, diagnostics = TRUE, df=Inf)->a172
+a172
+#在工具變數數量大於效應解釋變數的數量下，可以進行外生性檢定。檢定結果為不顯著，不拒絕H0，所以無法拒絕OLS和TSLS的係數差不多相同
 ```
 
 ## 1.8
