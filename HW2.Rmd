@@ -239,6 +239,18 @@ $$Y=Y_{-p}+\beta^* P$$
 
 若$E(\tilde{\epsilon}|P)=0.5+2P$，說明使用$E(Y|P_z,rincome)$其中$P_z$的係數會是$\beta^*$
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=\tilde{\epsilon}+2+3rincome+\beta^*P\\
+&拆解：P=E(P|P_z)+(P-E(P|P_z))\\
+&E(Y|P_z,rincome)=E(\tilde{\epsilon}|P_z,rincome)+2+3rincome+\beta^*[E(P|P_z,rincome)+(P-E(P|P_z,rincome))]\\
+&=E(\tilde{\epsilon}|P_z,rincome)+2+3rincome+\beta^*P_z+\beta^*(P-P_z)\\
+&=0.5+2P+2+3rincome+\beta^*P_z+\beta^*(P-P_z)\\
+&=2.5+2P+3rincome+\beta^*P_z+\beta^*(P-P_z)\\
+&=2.5+2P+3rincome+\beta^*\tilde{v}+\beta^*P_z\\
+\end{align}
+</td></tr></table>
+
 ## 2.5 立足點情境A.3+效應情境B.1：複迴歸
 
 承接上題情境，即
