@@ -264,6 +264,17 @@ $$Y=Y_{-p}+\beta^* P$$
 說明使用$E(Y|P,rincome,z)$其中$P$的係
 數不會是$\beta^*$.
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=Y_{-P,-z,-rincome}+\beta^*P+\beta_1^*rincome+\beta_2^*z\\
+&令P=\tilde{v}+P_z=\tilde{v}+\alpha_0+\alpha_1z\\
+&將z=\frac{P-\tilde{v}-\alpha_0}{\alpha_1}代回\\
+&Y=Y_{-P,-z,-rincome}+\beta^*P+\beta_1^*rincome+\beta_2^*\frac{P-\tilde{v}-\alpha_0}{\alpha_1}\\
+&=Y_{-P,-z,-rincome}+\beta_1^*rincome+(\beta^*+\frac{\beta_2^*}{\alpha_1})P+\beta_2^*\frac{-\tilde{v}-\alpha_0}{\alpha_1}\\
+&從上式可知P的係數不會是\beta^*\\
+\end{align}
+</td></tr></table>
+
 # 3. 替代變數
 
 有時資料並沒有所要的變數，但有其他具有代表性的替代變數（proxies）。如所要變數為「智商」，但智商沒有一定的衡量指標，我們常使用「IQ測驗成績」來代表智商，原因是我們認為它與「智商」有高度相關，也就是說：
