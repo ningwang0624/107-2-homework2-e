@@ -38,6 +38,9 @@ params:
 Execute the following code lines to import fertil2 data frame. 
 ```{r data1}
 library(readr)
+library(AER)
+library(dplyr)
+library(magrittr)
 fertil2 <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/fertil2.csv")
 ```
 The data includes, for women in Botswana during 1988, information on number of children, years of education, age, and religious and economic status variables.
@@ -50,8 +53,8 @@ by OLS, and interpret the estimates.
 
 ```{r ans11}
 library(lmtest)
-lm1<-lm(children~educ+age+agesq, data=fertil2)
-summary(lm1)
+a11<-lm(children~educ+age+agesq, data=fertil2)
+summary(a11)
 #每當媽媽教育年限增加一年，小孩數量下降0.090575個
 #每當媽媽年紀增加一歲，小孩數量增加0.3324個
 #每當媽媽年紀平方增加一歲，小孩數量減少0.0026個
@@ -62,8 +65,8 @@ The variable frsthalf is a dummy variable equal to one if the woman was born dur
 
 
 ```{r ans12}
-lm2<-lm(educ~frsthalf, data=fertil2)
-summary(lm2)
+a12<-lm(educ~frsthalf, data=fertil2)
+summary(a12)
 #此變數與error term無關，且因為係數不為零，為-0.9376，具有顯著性，所以證明此變數跟educ具有關聯性，可以當工具變數
 ```
 
@@ -72,7 +75,9 @@ Estimate the model from part 1.1 by using frsthalf as an IV for educ. Compare th
 
 
 ```{r ans13}
-
+a13<-ivreg(children~educ+age+agesq|age+agesq+frsthalf, data=fertil2)
+summary(a13)
+#加了工具變數之後，效果增強，係數由-0.0905變為-0.1715
 ```
 
 ## 1.4
