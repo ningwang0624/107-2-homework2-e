@@ -101,12 +101,15 @@ Continue from 1.4, conduct Hausman test to see if OLS is valid for the study und
 library(sandwich)
 summary(a142, vcov = sandwich, diagnostics = TRUE, df=Inf)->a15
 a15
+#由表格顯示的結果，可知在5%檢定水準下，Hausman不顯著，無法拒絕OLS和TSLS差不多相同
 ```
 
 ## 1.6
 Can we test whether frsthalf is indeed exogenous for being an IV? why or why not?
 
-
+\begin{align}
+&因為使用ivreg的前提為解釋變數與工具變數數量相同，所以在這個情況下我們沒辦法檢定外生性，若要檢定外生性，必須工具變數的數量大於解釋變數的數量。
+\end{align}
 
 ## 1.7
 If we add one more IV catholic, can we test IV exogeneity? If yes, what is the test result under a 5 percent test size.
