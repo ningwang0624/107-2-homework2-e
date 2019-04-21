@@ -157,6 +157,18 @@ $$Y=Y_{-p}+\beta^* P$$
 
 說明此時$E(Y|P)$中P的係數即為$\beta^*$.
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&將E(Y_{-p}|rincome)=2+3 rincome代入\\
+&E(Y|P)=E(\tilde{\epsilon})+2+3rincome+\beta^*E(P)\\
+&=\beta^*P+2+3rincome\\
+&因為P和\tilde{\epsilon}及rincome皆無關，立足點相同\\
+&所以2+3rincome為確定的常數\\
+&因此此時E(Y|P)的P係數為\beta^*\\
+\end{align}
+</td></tr></table>
+
 ## 2.2 立足點情境A.2
 
 此情境包含兩部份：
