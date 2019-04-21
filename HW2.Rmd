@@ -208,6 +208,23 @@ $$Y=Y_{-p}+\beta^* P$$
 
 若$E(\tilde{\epsilon}|P)=0.5+2P$，說明不論使用$E(Y|P)$或$E(Y|P,rincome)$，其P之係數都不會是$\beta^*$
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&Y=\tilde{\epsilon}+E(Y_{-P}|rincome)+\beta^*P\\
+&=\tilde{\epsilon}+2+3rincome+\beta^*P\\
+&E(Y|P)=E(\tilde{\epsilon}|P)+2+3E(rincome|P)+\beta^*P\\
+&因為P和\tilde{\epsilon}有關，所以將0.5+2P代入\\
+&而P和rincome有關，所以將0.5+P代入\\
+&=0.5+2P+2+3(0.5+P)+\beta^*P\\
+&=4+(5+\beta^*)P\\
+&\\
+&E(Y|P,rincome)=2+3rincome+\beta^*P+E(\tilde{\epsilon}|P,rincome)\\
+&此時多固定rincome，所以只需代入0.5+2P\\
+&=0.5+2P+2+3rincome+\beta^*P\\
+&=2.5+3rincome+(2+\beta^*)P
+\end{align}
+</td></tr></table>
+
 ## 2.4 立足點情境A.3+效應情境B.1：TSLS
 
 考慮以下三個情境條件：
