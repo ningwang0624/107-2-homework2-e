@@ -681,10 +681,34 @@ a172</code></pre>
 <div id="section-8" class="section level2">
 <h2>3.1</h2>
 <p>若我們沒有真正的<span class="math inline">\(x_i\)</span>資料而改成使用它的替代變數<span class="math inline">\(\tilde{x}_i\)</span>進行複迴歸，且令 <span class="math display">\[\tilde{x}_i=x_i+\epsilon_i.\]</span> 請問效應解釋變數使用替代變數下，<span class="math inline">\(\tilde{x}_i\)</span>的OLS估計式還有一致性嗎？（驗證<span class="math inline">\(E(y_i|\tilde{x}_i,w_i)\)</span>中<span class="math inline">\(\tilde{x_i}\)</span>的係數是否為<span class="math inline">\(\beta^*\)</span>）要有一致性會需要什麼額外條件嗎？</p>
+<table>
+<tr>
+<td bgcolor="#F5DEB3">
+<span class="math display">\[\begin{align}
+&amp;將\tilde{x_i}=x_i+\epsilon_i代入y_i=\beta^* x_i+\gamma w_i+y_{-x,-w,i}\\
+&amp;y_i=\beta^*(\tilde{x_i}-\epsilon_i)+\gamma w_i+y_{-x,-w,i}\\
+&amp;E(y_i|\tilde{x_i},w_i)=\beta^*E(\tilde{x_i}|\tilde{x_i},w_i)-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\gamma E(w_i|\tilde{x_i},w_i)+E(y_{-x,-w,i}|\tilde{x_i},w_i)\\
+&amp;=\beta^*\tilde{x_i}-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\gamma w_i+\beta^*E(\epsilon_i|\tilde{x_i},w_i)\\
+&amp;=\beta^*\tilde{x_i}+\gamma w_i-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\beta^*E(\epsilon_i|\tilde{x_i},w_i)\\
+&amp;若後兩項的y_{-x,-w,i}和\epsilon_i跟\tilde{x_i},w_i之間是獨立的\\
+&amp;則此時立足點相同，\tilde{x_i}的係數為\beta^*
+\end{align}\]</span>
+</td>
+</tr>
+</table>
 </div>
 <div id="section-9" class="section level2">
 <h2>3.2</h2>
 <p>若我們沒有真正的<span class="math inline">\(w_i\)</span>資料而改成使用它的替代變數<span class="math inline">\(\tilde{w}_i\)</span>進行複迴歸，且令 <span class="math display">\[\tilde{w}_i=w_i+\epsilon_i.\]</span> 請問控制變數使用替代變數下，<span class="math inline">\(x_i\)</span>的OLS估計式還有一致性嗎？（驗證<span class="math inline">\(E(y_i|x_i,\tilde{w}_i)\)</span>中<span class="math inline">\(x_i\)</span>的係數是否為<span class="math inline">\(\beta^*\)</span>）要有一致性會需要什麼額外條件嗎？</p>
+<table>
+<tr>
+<td bgcolor="#F5DEB3">
+<span class="math display">\[\begin{align}
+
+\end{align}\]</span>
+</td>
+</tr>
+</table>
 </div>
 </div>
 

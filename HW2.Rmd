@@ -293,10 +293,26 @@ $$y_i=\beta^* x_i+\gamma w_i+y_{-x,-w,i}$$
 $$\tilde{x}_i=x_i+\epsilon_i.$$
 請問效應解釋變數使用替代變數下，$\tilde{x}_i$的OLS估計式還有一致性嗎？（驗證$E(y_i|\tilde{x}_i,w_i)$中$\tilde{x_i}$的係數是否為$\beta^*$）要有一致性會需要什麼額外條件嗎？
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
+&將\tilde{x_i}=x_i+\epsilon_i代入y_i=\beta^* x_i+\gamma w_i+y_{-x,-w,i}\\
+&y_i=\beta^*(\tilde{x_i}-\epsilon_i)+\gamma w_i+y_{-x,-w,i}\\
+&E(y_i|\tilde{x_i},w_i)=\beta^*E(\tilde{x_i}|\tilde{x_i},w_i)-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\gamma E(w_i|\tilde{x_i},w_i)+E(y_{-x,-w,i}|\tilde{x_i},w_i)\\
+&=\beta^*\tilde{x_i}-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\gamma w_i+\beta^*E(\epsilon_i|\tilde{x_i},w_i)\\
+&=\beta^*\tilde{x_i}+\gamma w_i-\beta^*E(\epsilon_i|\tilde{x_i},w_i)+\beta^*E(\epsilon_i|\tilde{x_i},w_i)\\
+&若後兩項的y_{-x,-w,i}和\epsilon_i跟\tilde{x_i},w_i之間是獨立的\\
+&則此時立足點相同，\tilde{x_i}的係數為\beta^*
+\end{align}
+</td></tr></table>
+
 ## 3.2
 
 若我們沒有真正的$w_i$資料而改成使用它的替代變數$\tilde{w}_i$進行複迴歸，且令
 $$\tilde{w}_i=w_i+\epsilon_i.$$
 請問控制變數使用替代變數下，$x_i$的OLS估計式還有一致性嗎？（驗證$E(y_i|x_i,\tilde{w}_i)$中$x_i$的係數是否為$\beta^*$）要有一致性會需要什麼額外條件嗎？
 
+<table><tr><td bgcolor=#F5DEB3>
+\begin{align}
 
+\end{align}
+</td></tr></table>
