@@ -8,8 +8,8 @@ output:
       collapsed: true
       smooth_scroll: false
 params:
-  name: ["王逸寧","阿明"]
-  id: [710761126,710661002]
+  name: ["王逸寧","林奕誠","陳培鴻","吳泓叡"]
+  id: [710761126,710661110,710561118,710761119]
   group: "teamE"
   url: ""
 ---
@@ -107,9 +107,9 @@ a15
 ## 1.6
 Can we test whether frsthalf is indeed exogenous for being an IV? why or why not?
 
-\begin{align}
-&因為使用ivreg的前提為效應解釋變數與工具變數數量相同，所以在這個情況下我們沒辦法檢定外生性，若要檢定外生性，必須工具變數的數量大於解釋變數的數量。
-\end{align}
+<table><tr><td bgcolor=#F5DEB3>
+因為使用ivreg的前提為效應解釋變數與工具變數數量相同，所以在這個情況下我們沒辦法檢定外生性，若要檢定外生性，必須工具變數的數量大於解釋變數的數量。
+</td></tr></table>
 
 ## 1.7
 If we add one more IV catholic, can we test IV exogeneity? If yes, what is the test result under a 5 percent test size.
