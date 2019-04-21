@@ -128,7 +128,9 @@ Are frsthalf and catholic weak IVs?
 
 
 ```{r ans18}
-
+summary(a17, vcov = sandwich, diagnostics = TRUE, df=Inf)->a172
+a172
+#由檢定結果可知具有顯著性，拒絕H0，所以拒絕工具變數只有微弱關聯性，證明工具變數和效應解釋變數有強關聯性
 ```
 
 # 2 複迴歸與工具變數
