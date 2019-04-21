@@ -313,6 +313,12 @@ $$\tilde{w}_i=w_i+\epsilon_i.$$
 
 <table><tr><td bgcolor=#F5DEB3>
 \begin{align}
-
+&\tilde{w}_i=w_i+\epsilon_i ,其中w_i與\epsilon_i不獨立\\
+&y_i=\beta^* x_i+\gamma w_i+y_{-x,-w,i}\\
+&=\beta^* x_i+\gamma (\tilde{w}_i-\epsilon_i)+y_{-x,-w,i}\\
+&E(y_i|x_i,\tilde{w_i})=\beta^*E(x_i|x_i,\tilde{w_i})+\gamma E(\tilde{w_i}|x_i,\tilde{w_i})-\gamma E(\epsilon_i|x_i,\tilde{w_i})+E(y_{-x,-w,i}|x_i,\tilde{w_i})\\
+&最後一項因y已經去除x，則固定x_i的情況下該項為零\\
+&若確定E(\epsilon_i|x_i,\tilde{w_i})=0之條件,表示x_i與\epsilon_i獨立\\
+&則E(y_i|x_i,\tilde{w_i})=\beta^*x_i+\gamma\tilde{w_i}
 \end{align}
 </td></tr></table>
