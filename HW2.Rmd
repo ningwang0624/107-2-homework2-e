@@ -52,7 +52,7 @@ by OLS, and interpret the estimates.
 library(lmtest)
 lm1<-lm(children~educ+age+agesq, data=fertil2)
 summary(lm1)
-#每當媽媽教育年限增加1年，小孩數量下降0.090575個
+#每當媽媽教育年限增加一年，小孩數量下降0.090575個
 #每當媽媽年紀增加一歲，小孩數量增加0.3324個
 #每當媽媽年紀平方增加一歲，小孩數量減少0.0026個
 ```
@@ -62,7 +62,9 @@ The variable frsthalf is a dummy variable equal to one if the woman was born dur
 
 
 ```{r ans12}
-
+lm2<-lm(educ~frsthalf, data=fertil2)
+summary(lm2)
+#此變數與error term無關，且因為係數不為零，為-0.9376，具有顯著性，所以證明此變數跟educ具有關聯性，可以當工具變數
 ```
 
 ## 1.3
